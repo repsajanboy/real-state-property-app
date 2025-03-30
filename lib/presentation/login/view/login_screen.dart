@@ -1,5 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:real_state_property/routing/app_router_names.dart';
 import 'package:real_state_property/styles/app_images.dart';
+
+import 'widgets/divider_widget.dart';
+import 'widgets/social_icons_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -21,10 +26,10 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   _buildWelcomeMessage(),
                   _buildCreateNewAccount(),
-                  _buildDivider(),
-                  _buildSocialIcons(),
+                  buildDivider(),
+                  buildSocialIcons(),
                   _buildTermAndPrivacy(),
-                  _buildAlreadyHaveAnAccount(),
+                  _buildAlreadyHaveAnAccount(context),
                 ],
               ),
             ),
@@ -74,59 +79,7 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-
-  Widget _buildDivider() {
-    return Row(
-      children: [
-        Expanded(
-          child: Container(
-            margin: EdgeInsets.only(right: 15.0),
-            child: Divider(
-              color: Colors.black,
-              height: 50,
-            ),
-          ),
-        ),
-        Text("OR"),
-        Expanded(
-          child: Container(
-            margin: EdgeInsets.only(left: 15.0),
-            child: Divider(
-              color: Colors.black,
-              height: 50,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildSocialIcons() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        IconButton(
-          onPressed: () {},
-          icon: Image.asset(
-            AppImages.fbIcon,
-            width: 50,
-            height: 50,
-          ),
-          iconSize: 50,
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: Image.asset(
-            AppImages.googleIcon,
-            width: 50,
-            height: 50,
-          ),
-          iconSize: 24,
-        ),
-      ],
-    );
-  }
-
+  
   Widget _buildTermAndPrivacy() {
     return Align(
       alignment: Alignment.center,
@@ -177,7 +130,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildAlreadyHaveAnAccount() {
+  Widget _buildAlreadyHaveAnAccount(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
       child: RichText(
@@ -190,11 +143,16 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             TextSpan(
-                text: "Sign in",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ))
+              text: "Sign in",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  Navigator.pushNamed(context, RouteNames.loginEmail);
+                },
+            ),
           ],
         ),
       ),

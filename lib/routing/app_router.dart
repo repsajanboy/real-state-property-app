@@ -18,6 +18,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const LoginScreen(),
         );
+      case RouteNames.loginEmail:
+        return MaterialPageRoute(
+          builder: (_) => const LoginScreenWithEmaiScreen(),
+        );
       case RouteNames.signup:
         return MaterialPageRoute(
           builder: (_) => const SignupScreen(),
