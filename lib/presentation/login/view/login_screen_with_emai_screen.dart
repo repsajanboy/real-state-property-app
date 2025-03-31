@@ -14,10 +14,26 @@ class LoginScreenWithEmaiScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(
+              Icons.close_rounded,
+              color: Color.fromARGB(255, 9, 135, 248),
+            ),
+          ),
+        ],
+      ),
       body: Center(
         child: SingleChildScrollView(
-          child: SizedBox(
-            width: 300,
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 24.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
@@ -40,7 +56,8 @@ class LoginScreenWithEmaiScreen extends StatelessWidget {
                   ),
                 ),
                 buildLoginInputTextFields(),
-                buildLoginButton(),
+                SizedBox(height: 16),
+                buildLoginButton(context),
                 _buildDontHaveAnAccount(context),
               ],
             ),

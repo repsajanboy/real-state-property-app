@@ -24,7 +24,7 @@ class AppRouter {
         );
       case RouteNames.signup:
         return MaterialPageRoute(
-          builder: (_) => const SignupScreen(),
+          builder: (_) => SignupScreen(),
         );
       case RouteNames.menu:
         return MaterialPageRoute(

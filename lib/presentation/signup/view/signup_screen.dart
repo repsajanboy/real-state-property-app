@@ -1,17 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/routing/app_router_names.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+  SignupScreen({super.key});
+
+  final PageController _controller =
+      PageController(initialPage: 0, keepPage: true);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            if (_controller.page == 0) {
+              Navigator.of(context).pop();
+            } else {
+              _controller.previousPage(
+                duration: Duration(milliseconds: 200),
+                curve: Curves.easeIn,
+              );
+            }
+          },
+          icon: Icon(
+            Icons.arrow_back_rounded,
+            color: Color.fromARGB(255, 9, 135, 248),
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(
+              Icons.close_rounded,
+              color: Color.fromARGB(255, 9, 135, 248),
+            ),
+          )
+        ],
+      ),
       body: PageView(
+        controller: _controller,
         children: [
           _firstAndLastNamePage(),
           _emailInputPage(),
-          _passwordInputPage(),
+          _passwordInputPage(context),
         ],
       ),
     );
@@ -36,12 +69,13 @@ class SignupScreen extends StatelessWidget {
             ],
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 margin: EdgeInsets.all(10.0),
                 child: TextFormField(
                   autofocus: true,
+                  textInputAction: TextInputAction.next,
                   decoration: InputDecoration(
                     hintText: "First name",
                     hintMaxLines: 1,
@@ -51,14 +85,21 @@ class SignupScreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(10.0),
                 child: TextFormField(
+                  textInputAction: TextInputAction.next,
                   decoration: InputDecoration(
                     hintText: "Last name",
                     hintMaxLines: 1,
                   ),
                 ),
               ),
+              SizedBox(height: 16.0),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  _controller.nextPage(
+                    duration: Duration(milliseconds: 200),
+                    curve: Curves.easeIn,
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                     minimumSize: Size(300, 45),
                     shape: const RoundedRectangleBorder(
@@ -89,7 +130,7 @@ class SignupScreen extends StatelessWidget {
             ),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 margin: EdgeInsets.all(10),
@@ -101,8 +142,14 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 16.0),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  _controller.nextPage(
+                    duration: Duration(milliseconds: 200),
+                    curve: Curves.easeIn,
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(300, 45),
                   shape: const RoundedRectangleBorder(
@@ -122,7 +169,7 @@ class SignupScreen extends StatelessWidget {
     );
   }
 
-  Widget _passwordInputPage() {
+  Widget _passwordInputPage(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(16),
       child: Stack(
@@ -136,18 +183,23 @@ class SignupScreen extends StatelessWidget {
             ),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 margin: EdgeInsets.all(10),
                 child: TextFormField(
                   autofocus: true,
                   decoration: InputDecoration(
-                      hintText: "Your password", hintMaxLines: 1),
+                    hintText: "Your password",
+                    hintMaxLines: 1,
+                  ),
                 ),
               ),
+              SizedBox(height: 16.0),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteNames.menu);
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(300, 45),
                   shape: const RoundedRectangleBorder(

@@ -18,7 +18,7 @@ Widget buildLoginInputTextFields() {
       Container(
         margin: EdgeInsets.symmetric(vertical: 10.0),
         child: TextFormField(
-          obscureText: false,
+          obscureText: true,
           decoration: InputDecoration(
             labelText: "Password",
             labelStyle: TextStyle(fontSize: 16.0),

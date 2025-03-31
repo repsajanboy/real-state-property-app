@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/routing/app_router_names.dart';
 
-Widget buildLoginButton() {
+Widget buildLoginButton(BuildContext context) {
   return Container(
     margin: EdgeInsets.only(bottom: 10),
     child: ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, RouteNames.menu);
+      },
       style: ElevatedButton.styleFrom(
         minimumSize: Size(300, 45),
         shape: const RoundedRectangleBorder(
