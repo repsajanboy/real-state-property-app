@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   _buildWelcomeMessage(),
-                  _buildCreateNewAccount(),
+                  _buildCreateNewAccount(context),
                   buildDivider(),
                   buildSocialIcons(),
                   _buildTermAndPrivacy(),
@@ -63,9 +63,11 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildCreateNewAccount() {
+  Widget _buildCreateNewAccount(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, RouteNames.signup);
+      },
       style: ElevatedButton.styleFrom(
         minimumSize: Size(300, 45),
         shape: const RoundedRectangleBorder(
