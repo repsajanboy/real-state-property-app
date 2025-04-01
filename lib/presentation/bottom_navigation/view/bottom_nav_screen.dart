@@ -7,6 +7,8 @@ import 'package:real_state_property/presentation/my_leads/my_leads.dart';
 import 'package:real_state_property/presentation/my_listings/my_listing.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
 
+import 'sidebar_menu_screen.dart';
+
 class BottomNavScreen extends StatefulWidget {
   final int currIndex;
   const BottomNavScreen({super.key, required this.currIndex});
@@ -16,6 +18,7 @@ class BottomNavScreen extends StatefulWidget {
 }
 
 class _BottomNavScreenState extends State<BottomNavScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -40,13 +43,20 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   Widget _buildTab(BuildContext context, CreateBottomNav state) {
     final items = state.items.map((type) => _getItem(type));
     return Scaffold(
+      key: _scaffoldKey,
+      endDrawer: Drawer(
+        elevation: 10.0,
+        child: SidebarMenuScreen(),
+      ),
       appBar: AppBar(
         elevation: 0.0,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _scaffoldKey.currentState?.openEndDrawer();
+            },
             icon: Icon(
               Icons.menu,
               color: Color(0xff0987f8),
