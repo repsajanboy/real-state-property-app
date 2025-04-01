@@ -28,7 +28,7 @@ class AppRouter {
         );
       case RouteNames.menu:
         return MaterialPageRoute(
-          builder: (_) => const BottomNavScreen(),
+          builder: (_) => const BottomNavScreen(currIndex: 0,),
         );
       case RouteNames.addListing:
         return MaterialPageRoute(
