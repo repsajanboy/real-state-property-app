@@ -30,8 +30,8 @@ class BottomNavBloc extends Bloc<BottomNavEvent, BottomNavState> {
 
   List<BottomNavItemType> getItems() {
     return [
-      BottomNavItemType.leads,
       BottomNavItemType.listings,
+      BottomNavItemType.leads,
     ];
   }
 }
