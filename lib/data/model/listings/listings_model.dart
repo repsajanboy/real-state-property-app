@@ -4,8 +4,9 @@ class ListingsModel {
   ListingsModel({this.properties});
 
   factory ListingsModel.fromJson(Map<String, dynamic> json) => ListingsModel(
-        properties: json["properties"],
-      );  
+        properties: List<ListingProperty>.from(
+            json["properties"].map((x) => ListingProperty.fromJson(x))),
+      );
 }
 
 class ListingProperty {
@@ -37,21 +38,21 @@ class ListingProperty {
     this.description,
   });
 
-  factory ListingProperty.fromJson(Map<String, dynamic> json) => ListingProperty(
-    id: json["id"] as int,
-    title: json["title"] as String,
-    price: json["price"] as int,
-    currency: json["currency"] as String,
-    location: Location.fromJson(json["location"]),
-    propertyType: json["property_type"] as String,
-    bedrooms: json["bedrooms"] as int,
-    bathrooms: ["bathrooms"] as int,
-    squareFeet: json["square_feet"] as int,
-    amenities: List<String>.from(json["amenities"] ?? []),
-    images: List<String>.from(json["images"] ?? []),
-    description: json["description"] as String,
-
-  );
+  factory ListingProperty.fromJson(Map<String, dynamic> json) =>
+      ListingProperty(
+        id: json["id"] as int,
+        title: json["title"] as String,
+        price: json["price"] as int,
+        currency: json["currency"] as String,
+        location: Location.fromJson(json["location"]),
+        propertyType: json["property_type"] as String,
+        bedrooms: json["bedrooms"] as int,
+        bathrooms: json["bathrooms"] as int,
+        squareFeet: json["square_feet"] as int,
+        amenities: List<String>.from(json["amenities"] ?? []),
+        images: List<String>.from(json["images"] ?? []),
+        description: json["description"] as String,
+      );
 }
 
 class Location {
@@ -70,10 +71,10 @@ class Location {
   });
 
   factory Location.fromJson(Map<String, dynamic> json) => Location(
-    address: json["address"] as String,
-    city: json["city"] as String,
-    state: json["state"] as String,
-    zip: json["zip"] as String,
-    country: json["country"] as String,
-  );
+        address: json["address"] as String,
+        city: json["city"] as String,
+        state: json["state"] as String,
+        zip: json["zip"] as String,
+        country: json["country"] as String,
+      );
 }

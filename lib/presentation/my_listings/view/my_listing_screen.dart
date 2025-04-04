@@ -8,66 +8,78 @@ class MyListingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "My Listings",
-                        style: TextStyle(
-                          //google font anton
-                          fontSize: 28.0,
-                          color: Color(0xff023563),
+    return BlocProvider(
+      create: (context) => MyListingBloc()
+        ..add(
+          MyListingsFetched(),
+        ),
+      child: Scaffold(
+        body: Container(
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "My Listings",
+                          style: TextStyle(
+                            //google font anton
+                            fontSize: 28.0,
+                            color: Color(0xff023563),
+                          ),
                         ),
-                      ),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              IconButton(
+                                  onPressed: () {},
+                                  tooltip: 'Search',
+                                  icon: Icon(
+                                    Icons.search,
+                                  )),
+                              IconButton(
                                 onPressed: () {},
-                                tooltip: 'Search',
+                                tooltip: 'Filter',
                                 icon: Icon(
-                                  Icons.search,
-                                )),
-                            IconButton(
-                              onPressed: () {},
-                              tooltip: 'Filter',
-                              icon: Icon(
-                                Icons.filter_list,
+                                  Icons.filter_list,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
-            BlocBuilder<MyListingBloc, MyListingState>(builder: (context, state) {
-              return Expanded(
-                child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    padding: EdgeInsets.only(bottom: 25.0),
-                    itemCount: state.listings?.properties?.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      final property = state.listings?.properties?[index];
-                      return buildListingWidget(property!);
-                  },),
+                      ],
+                    )
+                  ],
                 ),
-              );
-            },),
-          ],
+              ),
+              BlocBuilder<MyListingBloc, MyListingState>(
+                builder: (context, state) {
+                  return Expanded(
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        padding: EdgeInsets.only(bottom: 25.0),
+                        itemCount: state.listings?.properties?.length ?? 0,
+                        itemBuilder: (BuildContext context, int index) {
+                          if(state.listings?.properties?.length == 0) {
+                            return Center(child: CircularProgressIndicator(),);
+                          }
+                          final property = state.listings?.properties?[index];
+                          return buildListingWidget(property);
+                        },
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
