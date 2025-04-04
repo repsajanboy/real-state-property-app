@@ -1,0 +1,166 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "title": "Luxury 3-Bedroom Apartment with Ocean View",
+        "price": 850000,
+        "currency": "USD",
+        "location": {
+          "address": "123 Ocean Drive",
+          "city": "Miami",
+          "state": "FL",
+          "zip": "33139",
+          "country": "USA"
+        },
+        "property_type": "Apartment",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "square_feet": 2000,
+        "amenities": ["Pool", "Gym", "Balcony", "Parking"],
+        "images": [
+          "https://example.com/images/property1_1.jpg",
+          "https://example.com/images/property1_2.jpg"
+        ],
+        "description": "A stunning ocean-view apartment in the heart of Miami. Walking distance to the beach and nightlife."
+      },
+      {
+        "id": 2,
+        "title": "Spacious 4-Bedroom Family Home",
+        "price": 450000,
+        "currency": "USD",
+        "location": {
+          "address": "456 Maple Street",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78701",
+          "country": "USA"
+        },
+        "property_type": "House",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 2800,
+        "amenities": ["Garage", "Backyard", "Fireplace", "Solar Panels"],
+        "images": [
+          "https://example.com/images/property2_1.jpg",
+          "https://example.com/images/property2_2.jpg"
+        ],
+        "description": "A beautiful family home with a large backyard and modern finishes. Located in a quiet and safe neighborhood."
+      },
+      {
+        "id": 3,
+        "title": "Modern 2-Bedroom Condo in Downtown LA",
+        "price": 600000,
+        "currency": "USD",
+        "location": {
+          "address": "789 Sunset Blvd",
+          "city": "Los Angeles",
+          "state": "CA",
+          "zip": "90028",
+          "country": "USA"
+        },
+        "property_type": "Condo",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "square_feet": 1500,
+        "amenities": ["Gym", "Rooftop Terrace", "Concierge", "Parking"],
+        "images": [
+          "https://example.com/images/property3_1.jpg",
+          "https://example.com/images/property3_2.jpg"
+        ],
+        "description": "A stylish condo in the heart of downtown LA with skyline views and luxury amenities."
+      },
+      {
+        "id": 4,
+        "title": "Cozy Cabin in the Woods",
+        "price": 300000,
+        "currency": "USD",
+        "location": {
+          "address": "101 Forest Lane",
+          "city": "Asheville",
+          "state": "NC",
+          "zip": "28803",
+          "country": "USA"
+        },
+        "property_type": "Cabin",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "square_feet": 1200,
+        "amenities": ["Fireplace", "Deck", "Hot Tub", "Nature Views"],
+        "images": [
+          "https://example.com/images/property4_1.jpg",
+          "https://example.com/images/property4_2.jpg"
+        ],
+        "description": "A charming cabin surrounded by nature, perfect for a quiet getaway or a vacation rental."
+      },
+      {
+        "id": 5,
+        "title": "Beachfront Villa with Private Pool",
+        "price": 1200000,
+        "currency": "USD",
+        "location": {
+          "address": "555 Oceanfront Ave",
+          "city": "Malibu",
+          "state": "CA",
+          "zip": "90265",
+          "country": "USA"
+        },
+        "property_type": "Villa",
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "square_feet": 3500,
+        "amenities": ["Private Pool", "Beach Access", "Outdoor Kitchen", "Jacuzzi"],
+        "images": [
+          "https://example.com/images/property5_1.jpg",
+          "https://example.com/images/property5_2.jpg"
+        ],
+        "description": "An exclusive beachfront villa with direct ocean access and luxurious amenities."
+      },
+      {
+        "id": 6,
+        "title": "Penthouse with Skyline Views",
+        "price": 2000000,
+        "currency": "USD",
+        "location": {
+          "address": "999 Highrise St",
+          "city": "New York",
+          "state": "NY",
+          "zip": "10001",
+          "country": "USA"
+        },
+        "property_type": "Penthouse",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "square_feet": 2500,
+        "amenities": ["Private Elevator", "Terrace", "Doorman", "Concierge"],
+        "images": [
+          "https://example.com/images/property6_1.jpg",
+          "https://example.com/images/property6_2.jpg"
+        ],
+        "description": "A luxurious penthouse in the heart of Manhattan with breathtaking skyline views."
+      },
+      {
+        "id": 7,
+        "title": "Historic Brownstone in Boston",
+        "price": 750000,
+        "currency": "USD",
+        "location": {
+          "address": "777 Beacon St",
+          "city": "Boston",
+          "state": "MA",
+          "zip": "02116",
+          "country": "USA"
+        },
+        "property_type": "Brownstone",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 2200,
+        "amenities": ["Patio", "Fireplace", "Finished Basement", "Historic Charm"],
+        "images": [
+          "https://example.com/images/property7_1.jpg",
+          "https://example.com/images/property7_2.jpg"
+        ],
+        "description": "A stunning historic brownstone in the heart of Boston's Back Bay neighborhood."
+      }
+    ]
+  }
+  
