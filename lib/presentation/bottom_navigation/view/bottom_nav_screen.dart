@@ -116,7 +116,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     switch (type) {
       case BottomNavItemType.listings:
         return BottomNavItem(
-          page: const MyListingScreen(),
+          page: const MyListingsScreen(),
           title: '',
           icon: Icon(
             Icons.home,
