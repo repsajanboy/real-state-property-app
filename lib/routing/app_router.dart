@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/data/model/listings/listings_model.dart';
 import 'package:real_state_property/presentation/add_listing/add_listing.dart';
 import 'package:real_state_property/presentation/bottom_navigation/bottom_navigation.dart';
 import 'package:real_state_property/presentation/edit_listing/edit_listing.dart';
 import 'package:real_state_property/presentation/login/login.dart';
+import 'package:real_state_property/presentation/my_listings/my_listing.dart';
 import 'package:real_state_property/presentation/onboarding/onboarding.dart';
 import 'package:real_state_property/presentation/signup/signup.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
@@ -28,7 +30,16 @@ class AppRouter {
         );
       case RouteNames.menu:
         return MaterialPageRoute(
-          builder: (_) => const BottomNavScreen(currIndex: 0,),
+          builder: (_) => const BottomNavScreen(
+            currIndex: 0,
+          ),
+        );
+      case RouteNames.listingScreen:
+        final property = routeSettings.arguments as ListingProperty;
+        return MaterialPageRoute(
+          builder: (_) => MyListingScreen(
+            property: property,
+          ),
         );
       case RouteNames.addListing:
         return MaterialPageRoute(

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
+import 'package:real_state_property/routing/app_router_names.dart';
 
-Widget buildListingWidget(ListingProperty? property) {
+Widget buildListingWidget(BuildContext context, ListingProperty? property) {
   return GestureDetector(
-    onTap: () {},
+    onTap: () {
+      Navigator.pushNamed(context, RouteNames.listingScreen, arguments: property);
+    },
     child: Container(
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       height: 215, //change this
