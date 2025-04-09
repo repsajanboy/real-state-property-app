@@ -43,7 +43,7 @@ class AppRouter {
         );
       case RouteNames.addListing:
         return MaterialPageRoute(
-          builder: (_) => const AddListingScreen(),
+          builder: (_) => AddListingScreen(),
         );
       case RouteNames.editListing:
         return MaterialPageRoute(
