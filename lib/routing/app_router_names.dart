@@ -7,5 +7,6 @@ class RouteNames {
   static const String menu = "menu-screen";
   static const String listingScreen = "listing-screen";
   static const String addListing = "add-listing-screen";
+  static const String uploadListingPhoto = "upload-listing-photo-screen";
   static const String editListing = "edit-listing-screen";
 }

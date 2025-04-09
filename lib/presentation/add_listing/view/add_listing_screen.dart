@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/routing/app_router_names.dart';
 
 class AddListingScreen extends StatelessWidget {
   AddListingScreen({super.key});
@@ -332,7 +333,9 @@ class AddListingScreen extends StatelessWidget {
                             Container(
                               width: double.infinity,
                               child: TextButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  Navigator.pushNamed(context, RouteNames.uploadListingPhoto);
+                                },
                                 style: TextButton.styleFrom(
                                   backgroundColor: Colors.blue,
                                 ),

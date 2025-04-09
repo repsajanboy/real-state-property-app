@@ -45,6 +45,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => AddListingScreen(),
         );
+      case RouteNames.uploadListingPhoto:
+        return MaterialPageRoute(
+          builder: (_) => UploadPhotoListingScreen(),
+        );
       case RouteNames.editListing:
         return MaterialPageRoute(
           builder: (_) => const EditListingScreen(),
