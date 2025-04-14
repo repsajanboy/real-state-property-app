@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             create: (context) => MyListingBloc()..add(MyListingsFetched()),
           ),
           BlocProvider(
-            create: (context) => MyLeadBloc(),
+            create: (context) => MyLeadBloc()..add(MyLeadsFetched()),
           ),
         ],
         child: MaterialApp(

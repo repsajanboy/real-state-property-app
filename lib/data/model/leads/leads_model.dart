@@ -46,11 +46,11 @@ class Lead {
         propertyType: json["property_type"] as String,
         budget: json["budget"] as int,
         location: json["location"] as String,
-        preferredContactMethod: ["preferred_contact_method"] as String,
+        preferredContactMethod: json["preferred_contact_method"] as String,
         status: json["status"] as String,
         moveInDate: json["move_in_date"] as String,
         financingStatus: json["financing_status"] as String,
-        agentAssigned: ["agent_assigned"] as String,
+        agentAssigned: json["agent_assigned"] as String,
         typeOfLead: json["type_of_lead"] as String,
       );
 }
