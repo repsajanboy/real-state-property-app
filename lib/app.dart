@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_state_property/blocs/bloc_barrel.dart';
-import 'package:real_state_property/data/repositories/listing_repository.dart';
 import 'package:real_state_property/routing/app_router.dart';
+
+import 'data/repositories/repositories_barrel.dart';
 
 class MyApp extends StatelessWidget {
   final AppRouter router;
@@ -15,11 +16,17 @@ class MyApp extends StatelessWidget {
         RepositoryProvider<ListingRepository>(
           create: (context) => ListingRepository(),
         ),
+        RepositoryProvider(
+          create: (context) => LeadRepository(),
+        ),
       ],
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
             create: (context) => MyListingBloc()..add(MyListingsFetched()),
+          ),
+          BlocProvider(
+            create: (context) => MyLeadBloc()..add(MyLeadsFetched()),
           ),
         ],
         child: MaterialApp(

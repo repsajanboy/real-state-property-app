@@ -9,4 +9,5 @@ class RouteNames {
   static const String addListing = "add-listing-screen";
   static const String uploadListingPhoto = "upload-listing-photo-screen";
   static const String editListing = "edit-listing-screen";
+  static const String leadScreen = "lead-screen";
 }

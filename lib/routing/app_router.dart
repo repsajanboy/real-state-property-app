@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/data/model/leads/leads_model.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
 import 'package:real_state_property/presentation/add_listing/add_listing.dart';
 import 'package:real_state_property/presentation/bottom_navigation/bottom_navigation.dart';
 import 'package:real_state_property/presentation/edit_listing/edit_listing.dart';
 import 'package:real_state_property/presentation/login/login.dart';
+import 'package:real_state_property/presentation/my_leads/my_leads.dart';
 import 'package:real_state_property/presentation/my_listings/my_listing.dart';
 import 'package:real_state_property/presentation/onboarding/onboarding.dart';
 import 'package:real_state_property/presentation/signup/signup.dart';
@@ -52,6 +54,11 @@ class AppRouter {
       case RouteNames.editListing:
         return MaterialPageRoute(
           builder: (_) => const EditListingScreen(),
+        );
+      case RouteNames.leadScreen:
+        final lead = routeSettings.arguments as Lead;
+        return MaterialPageRoute(
+          builder: (_) => MyLeadScreen(lead: lead),
         );
       default:
         return MaterialPageRoute(
