@@ -41,6 +41,9 @@ class SidebarMenuScreen extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.person_outline),
             title: Text("Profile"),
+            onTap: (){
+              Navigator.pushNamed(context, RouteNames.profileScreen);
+            },
           ),
           ListTile(
             leading: Icon(Icons.info_outline),
