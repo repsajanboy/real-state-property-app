@@ -8,6 +8,7 @@ import 'package:real_state_property/presentation/login/login.dart';
 import 'package:real_state_property/presentation/my_leads/my_leads.dart';
 import 'package:real_state_property/presentation/my_listings/my_listing.dart';
 import 'package:real_state_property/presentation/onboarding/onboarding.dart';
+import 'package:real_state_property/presentation/profile/profile.dart';
 import 'package:real_state_property/presentation/signup/signup.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
 
@@ -59,6 +60,10 @@ class AppRouter {
         final lead = routeSettings.arguments as Lead;
         return MaterialPageRoute(
           builder: (_) => MyLeadScreen(lead: lead),
+        );
+      case RouteNames.profileScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ProfileScreen(),
         );
       default:
         return MaterialPageRoute(
