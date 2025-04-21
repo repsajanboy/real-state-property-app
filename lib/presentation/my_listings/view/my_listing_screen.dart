@@ -10,7 +10,7 @@ class MyListingScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {},
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xff023563),
         label: Text(
           'START OPEN HOUSE',
           style: TextStyle(
@@ -103,112 +103,6 @@ class MyListingScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 40,
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      color: Colors.black.withValues(alpha: 0.6),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.king_bed,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            ' ${property.bedrooms}',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      color: Colors.black.withValues(alpha: 0.6),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.bathtub,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            ' ${property.bathrooms}',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      color: Colors.black.withValues(alpha: 0.6),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.apartment,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            ' ${property.squareFeet} sqft',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      color: Colors.black.withValues(alpha: 0.6),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.flag,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            ' For Sale',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned.fill(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Flex(
-                    direction: Axis.horizontal,
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: EdgeInsets.all(5.0),
-                          color: Colors.blueGrey.withValues(alpha: 0.6),
-                          child: Text(
-                            '\$ ${property.price}',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
             ],
           ),
           Expanded(
@@ -216,48 +110,155 @@ class MyListingScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(
                   top: 10.0,
-                  left: 10.0,
-                  right: 10.0,
+                  left: 20.0,
+                  right: 20.0,
                   bottom: 20.0,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Text(
+                          '${property.title}',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Row(
                           children: [
-                            Text(
-                              '${property.location?.address} ${property.location?.city} ${property.location?.state}',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                            Icon(
+                              Icons.location_on_outlined,
+                              color: Color(0xff023563),
                             ),
                             Text(
-                              '${property.location?.zip} ${property.location?.country}',
+                              '${property.location?.address} ${property.location?.city} ${property.location?.state} ${property.location?.zip} ${property.location?.country}',
                               style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 14.0,
+                                fontSize: 12.0,
                               ),
                             ),
                           ],
-                        )
+                        ),
                       ],
+                    ),
+                    SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            color: Colors.blueGrey.withValues(alpha: 0.6),
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.flag,
+                                color: Colors.white,
+                              ),
+                              Text(
+                                ' For Sale',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Text(
+                          '\$ ${property.price}',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.black87,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey),
+                          borderRadius: BorderRadius.circular(5.0)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Icon(
+                                Icons.king_bed_outlined,
+                                color: Colors.black38,
+                              ),
+                              Text(
+                                ' ${property.bedrooms} beds',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 40,
+                            child: VerticalDivider(
+                              color: Colors.black38,
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              Icon(
+                                Icons.bathtub_outlined,
+                                color: Colors.black38,
+                              ),
+                              Text(
+                                ' ${property.bathrooms} bath',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 40,
+                            child: VerticalDivider(
+                              color: Colors.black38,
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              Icon(
+                                Icons.apartment_outlined,
+                                color: Colors.black38,
+                              ),
+                              Text(
+                                ' ${property.squareFeet} sqft',
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                     SizedBox(height: 10),
                     Row(
                       children: [
                         Text(
                           'Property type: ',
+                          style: TextStyle(fontWeight: FontWeight.w500),
                         ),
                         Text(
                           '${property.propertyType}',
+                          style: TextStyle(fontStyle: FontStyle.italic),
                         ),
                       ],
                     ),
@@ -268,16 +269,15 @@ class MyListingScreen extends StatelessWidget {
                         Text(
                           'Description',
                           style: TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
                             fontStyle: FontStyle.italic,
                           ),
                         ),
                         SizedBox(height: 5.0),
-                        Container(
-                          child: Text(
-                            '${property.description}',
-                          ),
+                        Text(
+                          '${property.description}',
+                          style: TextStyle(color: Colors.grey),
                         )
                       ],
                     )
