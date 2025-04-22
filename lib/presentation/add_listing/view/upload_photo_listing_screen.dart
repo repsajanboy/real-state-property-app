@@ -30,7 +30,10 @@ class UploadPhotoListingScreen extends StatelessWidget {
             Navigator.pushNamed(context, RouteNames.menu);
           },
           style: TextButton.styleFrom(
-            backgroundColor: Colors.blue,
+            backgroundColor: Color(0xff023563),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10)
+            )
           ),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -43,6 +46,7 @@ class UploadPhotoListingScreen extends StatelessWidget {
                     color: Colors.white,
                     fontSize: 23.0,
                     fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5
                   ),
                 ),
               ],
@@ -94,6 +98,7 @@ class UploadPhotoListingScreen extends StatelessWidget {
                     FloatingActionButton(
                       onPressed: () {},
                       tooltip: 'Pick Image',
+                      backgroundColor: Colors.white,
                       child: Icon(Icons.add_a_photo),
                     ),
                     SizedBox(height: 8.0),
