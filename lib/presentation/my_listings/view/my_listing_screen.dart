@@ -280,7 +280,27 @@ class MyListingScreen extends StatelessWidget {
                           style: TextStyle(color: Colors.grey),
                         )
                       ],
-                    )
+                    ),
+                    SizedBox(height: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Amenities',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                        SizedBox(height: 5.0),
+                        Wrap(
+                          children: [
+                            ...property.amenities!.map((e) => Text('$e '))
+                          ],
+                        )
+                      ],
+                    ),
                   ],
                 ),
               ),
