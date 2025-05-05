@@ -327,17 +327,26 @@ class MyListingScreen extends StatelessWidget {
               ),
             ),
           ),
+          backgroundColor: Colors.grey.shade200,
           content: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Color(0xff023563),
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0))
+                      )
+                    ),
                     onPressed: () {},
                     label: Text('Edit listing'),
                     icon: Icon(
                       Icons.edit,
                       size: 18.0,
+                      color: Color(0xff023563),
                     ),
                   ),
                 ),
@@ -345,13 +354,18 @@ class MyListingScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.red,
-                        backgroundColor: Colors.white),
+                      foregroundColor: Colors.red,
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0))
+                      )
+                    ),
                     onPressed: () {},
                     label: Text('Delete listing'),
                     icon: Icon(
                       Icons.delete,
                       size: 18.0,
+                      color: Colors.red,
                     ),
                   ),
                 ),
