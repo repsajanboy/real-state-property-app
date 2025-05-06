@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
+import 'package:real_state_property/routing/app_router_names.dart';
 
 class MyListingScreen extends StatelessWidget {
   const MyListingScreen({super.key, required this.property});
@@ -338,10 +339,21 @@ class MyListingScreen extends StatelessWidget {
                       foregroundColor: Color(0xff023563),
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))
-                      )
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            8.0,
+                          ),
+                        ),
+                      ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      Navigator.pushNamed(
+                        context,
+                        RouteNames.editListing,
+                        arguments: property,
+                      );
+                    },
                     label: Text('Edit listing'),
                     icon: Icon(
                       Icons.edit,
@@ -357,8 +369,10 @@ class MyListingScreen extends StatelessWidget {
                       foregroundColor: Colors.red,
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))
-                      )
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(8.0),
+                        ),
+                      ),
                     ),
                     onPressed: () {},
                     label: Text('Delete listing'),

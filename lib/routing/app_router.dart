@@ -53,8 +53,9 @@ class AppRouter {
           builder: (_) => UploadPhotoListingScreen(),
         );
       case RouteNames.editListing:
+        final property = routeSettings.arguments as ListingProperty;
         return MaterialPageRoute(
-          builder: (_) => const EditListingScreen(),
+          builder: (_) => EditListingScreen(property: property),
         );
       case RouteNames.leadScreen:
         final lead = routeSettings.arguments as Lead;
