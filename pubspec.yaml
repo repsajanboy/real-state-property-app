@@ -71,6 +71,9 @@ flutter:
         - asset: assets/fonts/OpenSans-Regular.ttf
         - asset: assets/fonts/OpenSans-Italic.ttf
           style: italic
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

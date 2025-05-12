@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 Widget buildLoginButton(BuildContext context) {
   return Container(
@@ -16,7 +17,10 @@ Widget buildLoginButton(BuildContext context) {
         backgroundColor: Color(0xff0987f8),
         foregroundColor: Colors.white,
       ),
-      child: Text("LOG IN"),
+      child: Text(
+        "LOG IN",
+        style: AppTextStyle.buttonText,
+      ),
     ),
   );
 }
