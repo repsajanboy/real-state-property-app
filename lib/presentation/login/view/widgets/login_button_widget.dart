@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
+import 'package:real_state_property/styles/colors.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 Widget buildLoginButton(BuildContext context) {
   return Container(
@@ -13,10 +15,13 @@ Widget buildLoginButton(BuildContext context) {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
-        backgroundColor: Color(0xff0987f8),
+        backgroundColor: AppColors.mainColor,
         foregroundColor: Colors.white,
       ),
-      child: Text("LOG IN"),
+      child: Text(
+        "LOG IN",
+        style: AppTextStyle.buttonText,
+      ),
     ),
   );
 }

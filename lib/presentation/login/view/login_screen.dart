@@ -2,6 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
 import 'package:real_state_property/styles/app_images.dart';
+import 'package:real_state_property/styles/colors.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 import 'widgets/divider_widget.dart';
 import 'widgets/social_icons_widget.dart';
@@ -12,6 +14,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.mainBgColor,
       body: Stack(
         children: [
           _buildLoginScreenBackground(),
@@ -55,10 +58,7 @@ class LoginScreen extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 10.0),
       child: Text(
         "Start finding your next home!",
-        style: TextStyle(
-          fontSize: 25.0,
-          color: Color(0xff023563),
-        ),
+        style: AppTextStyle.loginTitleText,
       ),
     );
   }
@@ -73,11 +73,12 @@ class LoginScreen extends StatelessWidget {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
-        backgroundColor: Color(0xff0987f8),
+        backgroundColor: AppColors.mainColor,
         foregroundColor: Colors.white,
       ),
       child: Text(
         "Create an account",
+        style: AppTextStyle.buttonText,
       ),
     );
   }
@@ -92,9 +93,7 @@ class LoginScreen extends StatelessWidget {
             margin: EdgeInsets.only(top: 10.0),
             child: Text(
               "By continuing, you agree to our",
-              style: TextStyle(
-                color: Colors.black,
-              ),
+              style: AppTextStyle.bodyText,
             ),
           ),
           Container(
@@ -105,23 +104,15 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "Terms of Use",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: AppTextStyle.bodyTextBold,
                   ),
                   TextSpan(
                     text: " and ",
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
+                    style: AppTextStyle.bodyText,
                   ),
                   TextSpan(
                     text: "Privacy Policy",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: AppTextStyle.bodyTextBold,
                   ),
                 ],
               ),
@@ -140,16 +131,11 @@ class LoginScreen extends StatelessWidget {
           children: [
             TextSpan(
               text: "Already have an account? ",
-              style: TextStyle(
-                color: Colors.black,
-              ),
+              style: AppTextStyle.bodyText,
             ),
             TextSpan(
               text: "Sign in",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
+              style: AppTextStyle.bodyTextBold,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
                   Navigator.pushNamed(context, RouteNames.loginEmail);

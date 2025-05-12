@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
 import 'package:real_state_property/styles/app_images.dart';
+import 'package:real_state_property/styles/colors.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -16,75 +18,79 @@ class OnboardingScreen extends StatelessWidget {
       imagePadding: EdgeInsets.zero,
     );
 
-    return IntroductionScreen(
-      pages: [
-        PageViewModel(
-          titleWidget: _buildTitleWidget(
-            "Don't Miss Another Lead",
-            Colors.black,
+    return Scaffold(
+      backgroundColor: AppColors.mainBgColor,
+      body: IntroductionScreen(
+        globalBackgroundColor: Colors.white,
+        pages: [
+          PageViewModel(
+            titleWidget: _buildTitleWidget(
+              "Don't Miss Another Lead",
+              Colors.black,
+            ),
+            bodyWidget: _buildBodyWidget(
+              "More Than 90,000 Real Estate Agents Served",
+              Colors.black,
+            ),
+            image: _buildImage(AppImages.appIcon),
+            decoration: pageDecoration,
           ),
-          bodyWidget: _buildBodyWidget(
-            "More Than 90,000 Real Estate Agents Served",
-            Colors.black,
+          PageViewModel(
+            titleWidget: _buildTitleWidget(
+              "Create Your Listing",
+              Colors.black,
+            ),
+            bodyWidget: _buildBodyWidget(
+              "We make it easy to get the word out with one touch email and social sharing.",
+              Colors.black,
+            ),
+            image: _buildImage(AppImages.multiTasking, width: 300),
+            decoration: pageDecoration,
           ),
-          image: _buildImage(AppImages.appIcon),
-          decoration: pageDecoration,
+          PageViewModel(
+            titleWidget: _buildTitleWidget(
+              "Run Your Open House",
+              Colors.black,
+            ),
+            bodyWidget: _buildBodyWidget(
+              "After each open house, we'll send visitors a professional follow up email containing your contact information.",
+              Colors.black,
+            ),
+            image: _buildImage(AppImages.doorDrawing, width: 300),
+            decoration: pageDecoration,
+          ),
+          PageViewModel(
+            titleWidget: _buildTitleWidget(
+              "Convert More Leads Into Clients",
+              Colors.black,
+            ),
+            bodyWidget: _buildBodyWidget(
+              "We'll send you a list of leads that don't have an agent or have a home to sell, so you know where to focus your time.",
+              Colors.black,
+            ),
+            image: _buildImage(AppImages.yogaGirl, width: 220),
+            decoration: pageDecoration,
+          ),
+        ],
+        onDone: () => _onIntroEnd(context),
+        showSkipButton: true,
+        skipOrBackFlex: 0,
+        nextFlex: 0,
+        dotsFlex: 1,
+        skip: Text('Skip', style: AppTextStyle.bodyText),
+        next: Icon(
+          Icons.arrow_forward,
+          color: Colors.black,
         ),
-        PageViewModel(
-          titleWidget: _buildTitleWidget(
-            "Create Your Listing",
-            Colors.black,
+        done: Text('Done', style: AppTextStyle.bodyText),
+        dotsDecorator: DotsDecorator(
+          size: Size(10.0, 10.0),
+          color: Colors.grey,
+          activeColor: Colors.blue,
+          activeSize: Size(20.0, 10.0),
+          activeShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(25.0)),
           ),
-          bodyWidget: _buildBodyWidget(
-            "We make it easy to get the word out with one touch email and social sharing.",
-            Colors.black,
-          ),
-          image: _buildImage(AppImages.multiTasking, width: 300),
-          decoration: pageDecoration,
-        ),
-        PageViewModel(
-          titleWidget: _buildTitleWidget(
-            "Run Your Open House",
-            Colors.black,
-          ),
-          bodyWidget: _buildBodyWidget(
-            "After each open house, we'll send visitors a professional follow up email containing your contact information.",
-            Colors.black,
-          ),
-          image: _buildImage(AppImages.doorDrawing, width: 300),
-          decoration: pageDecoration,
-        ),
-        PageViewModel(
-          titleWidget: _buildTitleWidget(
-            "Convert More Leads Into Clients",
-            Colors.black,
-          ),
-          bodyWidget: _buildBodyWidget(
-            "We'll send you a list of leads that don't have an agent or have a home to sell, so you know where to focus your time.",
-            Colors.black,
-          ),
-          image: _buildImage(AppImages.yogaGirl, width: 220),
-          decoration: pageDecoration,
-        ),
-      ],
-      onDone: () => _onIntroEnd(context),
-      showSkipButton: true,
-      skipOrBackFlex: 0,
-      nextFlex: 0,
-      dotsFlex: 1,
-      skip: Text('Skip', style: TextStyle(color: Colors.black)),
-      next: Icon(
-        Icons.arrow_forward,
-        color: Colors.black,
-      ),
-      done: Text('Done', style: TextStyle(color: Colors.black)),
-      dotsDecorator: DotsDecorator(
-        size: Size(10.0, 10.0),
-        color: Colors.grey,
-        activeColor: Colors.blue,
-        activeSize: Size(20.0, 10.0),
-        activeShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(25.0)),
         ),
       ),
     );
@@ -108,11 +114,7 @@ class OnboardingScreen extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.center,
-      style: TextStyle(
-        fontSize: 24.0,
-        color: color,
-        fontWeight: FontWeight.w500,
-      ),
+      style: AppTextStyle.onboardingTitleText,
     );
   }
 
@@ -120,7 +122,7 @@ class OnboardingScreen extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: 16.0, color: color),
+      style: AppTextStyle.onboardingBodyText,
     );
   }
 }
