@@ -32,6 +32,19 @@ class AppTextStyle {
     color: Colors.black45
   );
 
+    static const TextStyle signupTitleText = TextStyle(
+    fontFamily: 'Nunito',
+    fontSize: 26.0,
+    fontWeight: FontWeight.bold,
+    color: AppColors.mainColor,
+  );
+
+   static const TextStyle signupHintText = TextStyle(
+    fontFamily: 'Open Sans',
+    fontSize: 16.0,
+    color: Colors.black45
+  );
+
   static const TextStyle bodyText = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.black,

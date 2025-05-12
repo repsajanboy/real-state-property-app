@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
 import 'package:real_state_property/styles/app_images.dart';
+import 'package:real_state_property/styles/colors.dart';
 import 'package:real_state_property/styles/text_styles.dart';
 
 import 'widgets/divider_widget.dart';
@@ -15,9 +16,10 @@ class LoginScreenWithEmaiScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.mainBgColor,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: AppColors.mainBgColor,
         automaticallyImplyLeading: false,
         actions: [
           IconButton(

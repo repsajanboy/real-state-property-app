@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
 import 'package:real_state_property/styles/app_images.dart';
+import 'package:real_state_property/styles/colors.dart';
 import 'package:real_state_property/styles/text_styles.dart';
 
 import 'widgets/divider_widget.dart';
@@ -13,6 +14,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.mainBgColor,
       body: Stack(
         children: [
           _buildLoginScreenBackground(),
@@ -71,7 +73,7 @@ class LoginScreen extends StatelessWidget {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(5)),
         ),
-        backgroundColor: Color(0xff0987f8),
+        backgroundColor: AppColors.mainColor,
         foregroundColor: Colors.white,
       ),
       child: Text(
