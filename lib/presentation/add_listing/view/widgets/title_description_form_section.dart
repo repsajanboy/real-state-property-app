@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class TitleDescriptionFormSection extends StatelessWidget {
   const TitleDescriptionFormSection({super.key});
@@ -10,18 +11,14 @@ class TitleDescriptionFormSection extends StatelessWidget {
       children: [
         Text(
           'PROPERTY TITLE',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.5,
-          ),
+          style: AppTextStyle.titleTextBold,
         ),
         SizedBox(height: 8.0),
         TextField(
           decoration: InputDecoration(
             isDense: true,
             hintText: 'Enter title',
-            hintStyle: TextStyle(color: Colors.grey),
+            hintStyle: AppTextStyle.textFieldHintText,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(
                 Radius.circular(10.0),
@@ -35,7 +32,7 @@ class TitleDescriptionFormSection extends StatelessWidget {
                 Radius.circular(10.0),
               ),
               borderSide: BorderSide(
-                color: Colors.grey,
+                color: Colors.black54,
               ),
             ),
           ),
@@ -43,11 +40,7 @@ class TitleDescriptionFormSection extends StatelessWidget {
         SizedBox(height: 8.0),
         Text(
           'PROPERTY DESCRIPTION',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.5,
-          ),
+          style: AppTextStyle.titleTextBold,
         ),
         SizedBox(height: 8.0),
         TextField(
@@ -55,9 +48,7 @@ class TitleDescriptionFormSection extends StatelessWidget {
           decoration: InputDecoration(
             isDense: true,
             hintText: "Enter description",
-            hintStyle: TextStyle(
-              color: Colors.grey,
-            ),
+            hintStyle: AppTextStyle.textFieldHintText,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(
                 Radius.circular(10),
@@ -71,7 +62,7 @@ class TitleDescriptionFormSection extends StatelessWidget {
                 Radius.circular(10),
               ),
               borderSide: BorderSide(
-                color: Colors.grey,
+                color: Colors.black54,
               ),
             ),
           ),

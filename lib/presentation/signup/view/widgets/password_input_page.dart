@@ -20,7 +20,7 @@ Widget passwordInputPage(BuildContext context) {
                 autofocus: true,
                 decoration: InputDecoration(
                   hintText: "Your password",
-                  hintStyle: AppTextStyle.signupHintText,
+                  hintStyle: AppTextStyle.textFieldHintText,
                   hintMaxLines: 1,
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(

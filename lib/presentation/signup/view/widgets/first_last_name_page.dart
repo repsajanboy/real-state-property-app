@@ -27,7 +27,7 @@ Widget firstAndLastNamePage(PageController controller) {
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
                   hintText: "First name",
-                  hintStyle: AppTextStyle.signupHintText,
+                  hintStyle: AppTextStyle.textFieldHintText,
                   hintMaxLines: 1,
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
@@ -44,7 +44,7 @@ Widget firstAndLastNamePage(PageController controller) {
                 textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
                   hintText: "Last name",
-                  hintStyle: AppTextStyle.signupHintText,
+                  hintStyle: AppTextStyle.textFieldHintText,
                   hintMaxLines: 1,
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(

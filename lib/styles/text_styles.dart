@@ -39,16 +39,17 @@ class AppTextStyle {
     color: AppColors.mainColor,
   );
 
-  static const TextStyle signupHintText = TextStyle(
-    fontFamily: 'Open Sans',
-    fontSize: 16.0,
-    color: Colors.black45,
-  );
-
   static const TextStyle mainTitle = TextStyle(
     fontFamily: 'Anton',
     color: AppColors.mainColor,
     fontSize: 28.0,
+  );
+
+  static const TextStyle titleTextBold = TextStyle(
+    fontFamily: 'Nunito',
+    color: Colors.black87,
+    fontWeight: FontWeight.bold,
+    letterSpacing: 1.5,
   );
 
   static const TextStyle listingNameBold = TextStyle(
@@ -70,6 +71,12 @@ class AppTextStyle {
     color: Colors.black,
   );
 
+  static const TextStyle bodyTextSmall = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.black,
+    fontSize: 14.0,
+  );
+
   static const TextStyle bodyTextGrey = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.grey,
@@ -85,5 +92,19 @@ class AppTextStyle {
     fontFamily: 'Open Sans',
     color: Colors.white,
     fontSize: 16.0,
+  );
+
+  static const TextStyle buttonTextLarge = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.white,
+    fontSize: 18.0,
+    fontWeight: FontWeight.bold,
+    letterSpacing: 1.5,
+  );
+
+  static const TextStyle textFieldHintText = TextStyle(
+    fontFamily: 'Open Sans',
+    fontSize: 16.0,
+    color: Colors.black45,
   );
 }

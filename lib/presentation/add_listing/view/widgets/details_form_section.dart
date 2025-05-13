@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class DetailsFormSection extends StatelessWidget {
   DetailsFormSection({super.key});
@@ -35,17 +36,13 @@ class DetailsFormSection extends StatelessWidget {
             children: [
               Text(
                 'PRICE & DETAILS',
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.5,
-                ),
+                style: AppTextStyle.titleTextBold,
               ),
               SizedBox(height: 8.0),
               TextField(
                 decoration: InputDecoration(
                   hintText: "Enter property price",
-                  hintStyle: TextStyle(color: Colors.grey),
+                  hintStyle: AppTextStyle.textFieldHintText,
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
@@ -59,7 +56,7 @@ class DetailsFormSection extends StatelessWidget {
                       Radius.circular(10),
                     ),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: Colors.black54,
                     ),
                   ),
                 ),
@@ -84,9 +81,7 @@ class DetailsFormSection extends StatelessWidget {
                           iconSize: 24.0,
                           hint: Text(
                             'Select status',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
+                            style: AppTextStyle.textFieldHintText,
                           ),
                           items: statusItems
                               .map<DropdownMenuItem<String>>((String value) {
@@ -117,9 +112,7 @@ class DetailsFormSection extends StatelessWidget {
                           iconSize: 24.0,
                           hint: Text(
                             'Select type',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
+                            style: AppTextStyle.textFieldHintText,
                           ),
                           items: typeItems
                               .map<DropdownMenuItem<String>>((String value) {
@@ -143,9 +136,7 @@ class DetailsFormSection extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "No. of Beds",
-                        hintStyle: TextStyle(
-                          color: Colors.grey
-                        ),
+                        hintStyle: AppTextStyle.textFieldHintText,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(10),
@@ -159,7 +150,7 @@ class DetailsFormSection extends StatelessWidget {
                             Radius.circular(10),
                           ),
                           borderSide: BorderSide(
-                            color: Colors.grey,
+                            color: Colors.black54,
                           ),
                         ),
                       ),
@@ -170,9 +161,7 @@ class DetailsFormSection extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "No. of Baths",
-                        hintStyle: TextStyle(
-                          color: Colors.grey
-                        ),
+                        hintStyle: AppTextStyle.textFieldHintText,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(10),
@@ -186,7 +175,7 @@ class DetailsFormSection extends StatelessWidget {
                             Radius.circular(10),
                           ),
                           borderSide: BorderSide(
-                            color: Colors.grey,
+                            color: Colors.black54,
                           ),
                         ),
                       ),
@@ -198,9 +187,7 @@ class DetailsFormSection extends StatelessWidget {
               TextField(
                 decoration: InputDecoration(
                   hintText: "Enter property size (square feet)",
-                  hintStyle: TextStyle(
-                    color: Colors.grey
-                  ),
+                  hintStyle: AppTextStyle.textFieldHintText,
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
@@ -214,7 +201,7 @@ class DetailsFormSection extends StatelessWidget {
                       Radius.circular(10),
                     ),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: Colors.black54,
                     ),
                   ),
                 ),

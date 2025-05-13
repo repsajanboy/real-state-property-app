@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
+import 'package:real_state_property/styles/colors.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class UploadPhotoListingScreen extends StatelessWidget {
   const UploadPhotoListingScreen({super.key});
@@ -7,20 +9,19 @@ class UploadPhotoListingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.mainBgColor,
       appBar: AppBar(
         elevation: 0.0,
         title: Align(
           alignment: Alignment.centerRight,
           child: Text(
-            "2/2",
-            style: TextStyle(
-              color: Colors.black,
-            ),
+            "2 / 2",
+            style: AppTextStyle.bodyTextSmall,
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: AppColors.mainBgColor,
         leading: BackButton(
-          color: Color(0xff023563),
+          color: AppColors.mainColor,
         ),
       ),
       bottomNavigationBar: Container(
@@ -30,24 +31,17 @@ class UploadPhotoListingScreen extends StatelessWidget {
             Navigator.pushNamed(context, RouteNames.menu);
           },
           style: TextButton.styleFrom(
-            backgroundColor: Color(0xff023563),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)
-            )
-          ),
+              backgroundColor: Color(0xff023563),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10))),
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(5.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'SAVE',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 23.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.5
-                  ),
+                  style: AppTextStyle.buttonTextLarge,
                 ),
               ],
             ),
@@ -67,17 +61,11 @@ class UploadPhotoListingScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Upload your",
-                      style: TextStyle(
-                        fontSize: 28.0,
-                        color: Color(0xff023563),
-                      ),
+                      style: AppTextStyle.mainTitle,
                     ),
                     Text(
                       "Property Photos here",
-                      style: TextStyle(
-                        fontSize: 28.0,
-                        color: Color(0xff023563),
-                      ),
+                      style: AppTextStyle.mainTitle,
                     ),
                   ],
                 ),
@@ -99,10 +87,16 @@ class UploadPhotoListingScreen extends StatelessWidget {
                       onPressed: () {},
                       tooltip: 'Pick Image',
                       backgroundColor: Colors.white,
-                      child: Icon(Icons.add_a_photo),
+                      child: Icon(
+                        Icons.add_a_photo,
+                        color: AppColors.mainColor,
+                      ),
                     ),
                     SizedBox(height: 8.0),
-                    Text("Upload photo"),
+                    Text(
+                      "Upload photo",
+                      style: AppTextStyle.bodyText,
+                    ),
                   ],
                 ),
               ),
@@ -110,7 +104,7 @@ class UploadPhotoListingScreen extends StatelessWidget {
               Expanded(
                   child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.grey.shade300,
                   borderRadius: BorderRadius.all(
                     Radius.circular(8.0),
                   ),

@@ -18,7 +18,7 @@ Widget emailInputPage(PageController controller) {
                 autofocus: true,
                 decoration: InputDecoration(
                   hintText: 'you@example.com',
-                  hintStyle: AppTextStyle.signupHintText,
+                  hintStyle: AppTextStyle.textFieldHintText,
                   hintMaxLines: 1,
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(

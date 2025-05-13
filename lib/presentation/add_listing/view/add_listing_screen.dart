@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
+import 'package:real_state_property/styles/colors.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 import 'widgets/address_form_section.dart';
 import 'widgets/amenities_section.dart';
@@ -12,18 +14,18 @@ class AddListingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.mainBgColor,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: AppColors.mainBgColor,
         leading: BackButton(
-          color: Color(0xff023563),
+          color: AppColors.mainColor,
         ),
         title: Align(
           alignment: Alignment.centerRight,
           child: Text(
-            '1/2',
-            style: TextStyle(color: Colors.black),
+            '1 / 2',
+            style: AppTextStyle.bodyTextSmall,
           ),
         ),
       ),
@@ -41,17 +43,11 @@ class AddListingScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Add your',
-                        style: TextStyle(
-                          fontSize: 28.0,
-                          color: Color(0xff023563),
-                        ),
+                        style: AppTextStyle.mainTitle,
                       ),
                       Text(
                         'Property details here',
-                        style: TextStyle(
-                          fontSize: 28.0,
-                          color: Color(0xff023563),
-                        ),
+                        style: AppTextStyle.mainTitle,
                       ),
                     ],
                   ),
@@ -75,17 +71,14 @@ class AddListingScreen extends StatelessWidget {
                               context, RouteNames.uploadListingPhoto);
                         },
                         style: TextButton.styleFrom(
-                            backgroundColor: Color(0xff023563),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8.0))),
+                          backgroundColor: Color(0xff023563),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
                         child: Text(
                           "CREATE NEW LISTING",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.5,
-                          ),
+                          style: AppTextStyle.buttonTextLarge,
                         ),
                       ),
                     )
