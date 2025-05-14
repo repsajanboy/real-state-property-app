@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 Widget buildListingWidget(BuildContext context, ListingProperty? property) {
   return GestureDetector(
@@ -98,20 +99,12 @@ Widget buildListingWidget(BuildContext context, ListingProperty? property) {
                           Text(
                             '${property?.title}',
                             overflow: TextOverflow.clip,
-                            style: TextStyle(
-                              fontSize: 14.0,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            style: AppTextStyle.listingNameBold
                           ),
                           SizedBox(height: 5.0),
                           Text(
                             '${property?.location?.address} ${property?.location?.city} ${property?.location?.state}',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.grey,
-                              fontWeight: FontWeight.w400,
-                            ),
+                            style: AppTextStyle.bodyTextGrey,
                           ),
                         ],
                       ),
@@ -135,11 +128,7 @@ Widget buildListingWidget(BuildContext context, ListingProperty? property) {
                               ),
                               Text(
                                 ' ${property?.bedrooms}',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Colors.black87,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                                style: AppTextStyle.listingDetailText,
                               )
                             ],
                           ),
@@ -159,11 +148,7 @@ Widget buildListingWidget(BuildContext context, ListingProperty? property) {
                               ),
                               Text(
                                 ' ${property?.bathrooms}',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Colors.black87,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                                style: AppTextStyle.listingDetailText,
                               )
                             ],
                           ),
@@ -183,11 +168,7 @@ Widget buildListingWidget(BuildContext context, ListingProperty? property) {
                               ),
                               Text(
                                 ' ${property?.squareFeet} sqft',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Colors.black87,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                                style: AppTextStyle.listingDetailText,
                               )
                             ],
                           ),
@@ -207,11 +188,7 @@ Widget buildListingWidget(BuildContext context, ListingProperty? property) {
                               ),
                               Text(
                                 ' For Sale',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: Colors.black87,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                                style: AppTextStyle.listingDetailText,
                               )
                             ],
                           ),

@@ -6,6 +6,7 @@ import 'package:real_state_property/blocs/bottom_nav/bottom_nav_item_type.dart';
 import 'package:real_state_property/presentation/my_leads/my_leads.dart';
 import 'package:real_state_property/presentation/my_listings/my_listing.dart';
 import 'package:real_state_property/routing/app_router_names.dart';
+import 'package:real_state_property/styles/colors.dart';
 
 import 'sidebar_menu_screen.dart';
 
@@ -43,6 +44,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   Widget _buildTab(BuildContext context, CreateBottomNav state) {
     final items = state.items.map((type) => _getItem(type));
     return Scaffold(
+      backgroundColor: AppColors.mainBgColor,
       key: _scaffoldKey,
       endDrawer: Drawer(
         elevation: 10.0,
@@ -51,7 +53,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
       appBar: AppBar(
         elevation: 0.0,
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.transparent,
+        backgroundColor: AppColors.mainBgColor,
         actions: [
           IconButton(
             onPressed: () {
@@ -59,7 +61,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
             },
             icon: Icon(
               Icons.menu,
-              color: Color(0xff0987f8),
+              color: Colors.black,
             ),
           ),
         ],
@@ -124,7 +126,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
           ),
           activeIcon: Icon(
             Icons.home,
-            color: Colors.blue,
+            color: Colors.black,
           ),
         );
       case BottomNavItemType.leads:
@@ -137,7 +139,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
           ),
           activeIcon: Icon(
             Icons.people,
-            color: Colors.blue,
+            color: Colors.black,
           ),
         );
     }

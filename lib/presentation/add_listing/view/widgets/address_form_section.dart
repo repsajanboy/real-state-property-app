@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class AddressFormSection extends StatelessWidget {
   const AddressFormSection({super.key});
@@ -10,11 +11,7 @@ class AddressFormSection extends StatelessWidget {
       children: [
         Text(
           'ADDRESS',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.5,
-          ),
+          style: AppTextStyle.titleTextBold,
         ),
         SizedBox(height: 8.0),
         Row(
@@ -24,9 +21,7 @@ class AddressFormSection extends StatelessWidget {
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'Country',
-                  hintStyle: TextStyle(
-                    color: Colors.grey
-                  ),
+                  hintStyle: AppTextStyle.textFieldHintText,
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
@@ -40,7 +35,7 @@ class AddressFormSection extends StatelessWidget {
                       Radius.circular(10.0),
                     ),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: Colors.black54,
                     ),
                   ),
                 ),
@@ -52,9 +47,7 @@ class AddressFormSection extends StatelessWidget {
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'State / Province',
-                  hintStyle: TextStyle(
-                    color: Colors.grey
-                  ),
+                  hintStyle: AppTextStyle.textFieldHintText,
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
@@ -68,7 +61,7 @@ class AddressFormSection extends StatelessWidget {
                       Radius.circular(10.0),
                     ),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: Colors.black54,
                     ),
                   ),
                 ),
@@ -84,9 +77,7 @@ class AddressFormSection extends StatelessWidget {
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'City',
-                  hintStyle: TextStyle(
-                    color: Colors.grey
-                  ),
+                  hintStyle: AppTextStyle.textFieldHintText,
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
@@ -100,7 +91,7 @@ class AddressFormSection extends StatelessWidget {
                       Radius.circular(10.0),
                     ),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: Colors.black54,
                     ),
                   ),
                 ),
@@ -112,9 +103,7 @@ class AddressFormSection extends StatelessWidget {
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'Zip / Postal Code',
-                  hintStyle: TextStyle(
-                    color: Colors.grey
-                  ),
+                  hintStyle: AppTextStyle.textFieldHintText,
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
@@ -128,7 +117,7 @@ class AddressFormSection extends StatelessWidget {
                       Radius.circular(10.0),
                     ),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: Colors.black54,
                     ),
                   ),
                 ),
@@ -141,9 +130,7 @@ class AddressFormSection extends StatelessWidget {
           decoration: InputDecoration(
             isDense: true,
             hintText: 'Address or street name',
-            hintStyle: TextStyle(
-              color: Colors.grey
-            ),
+            hintStyle: AppTextStyle.textFieldHintText,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(
                 Radius.circular(10.0),
@@ -157,7 +144,7 @@ class AddressFormSection extends StatelessWidget {
                 Radius.circular(10.0),
               ),
               borderSide: BorderSide(
-                color: Colors.grey,
+                color: Colors.black54,
               ),
             ),
           ),
