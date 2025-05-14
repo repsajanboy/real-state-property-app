@@ -71,6 +71,13 @@ class AppTextStyle {
     color: Colors.black,
   );
 
+  static const TextStyle bodyTextMediumBold = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.black87,
+    fontWeight: FontWeight.bold,
+    fontSize: 16.0
+  );
+
   static const TextStyle bodyTextSmall = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.black,
@@ -80,6 +87,11 @@ class AppTextStyle {
   static const TextStyle bodyTextGrey = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.grey,
+  );
+
+  static const TextStyle bodyTextWhite = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.white,
   );
 
   static const TextStyle bodyTextBold = TextStyle(

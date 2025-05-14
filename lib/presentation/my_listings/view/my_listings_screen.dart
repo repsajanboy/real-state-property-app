@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_state_property/blocs/bloc_barrel.dart';
-import 'package:real_state_property/presentation/my_listings/view/widgets/listings_list_wdiget.dart';
 import 'package:real_state_property/styles/colors.dart';
 import 'package:real_state_property/styles/text_styles.dart';
+
+import 'widgets/listings_list_widget.dart';
 
 class MyListingsScreen extends StatelessWidget {
   const MyListingsScreen({super.key});
