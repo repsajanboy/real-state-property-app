@@ -18,6 +18,7 @@ class AddressFormSection extends StatelessWidget {
           children: [
             Expanded(
               child: TextField(
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'Country',
@@ -44,6 +45,7 @@ class AddressFormSection extends StatelessWidget {
             SizedBox(width: 8.0),
             Expanded(
               child: TextField(
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'State / Province',
@@ -74,6 +76,7 @@ class AddressFormSection extends StatelessWidget {
           children: [
             Expanded(
               child: TextField(
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'City',
@@ -100,6 +103,7 @@ class AddressFormSection extends StatelessWidget {
             SizedBox(width: 8.0),
             Expanded(
               child: TextField(
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'Zip / Postal Code',
@@ -127,6 +131,7 @@ class AddressFormSection extends StatelessWidget {
         ),
         SizedBox(height: 8.0),
         TextField(
+          style: AppTextStyle.bodyText,
           decoration: InputDecoration(
             isDense: true,
             hintText: 'Address or street name',

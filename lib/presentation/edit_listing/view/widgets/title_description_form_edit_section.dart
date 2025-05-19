@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class TitleDescriptionFormEditSection extends StatelessWidget {
   const TitleDescriptionFormEditSection({super.key, required this.property});
@@ -13,15 +14,12 @@ class TitleDescriptionFormEditSection extends StatelessWidget {
       children: [
         Text(
           'PROPERTY TITLE',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.5,
-          ),
+          style: AppTextStyle.titleTextBold,
         ),
         SizedBox(height: 8.0),
         TextFormField(
           initialValue: property.title,
+          style: AppTextStyle.bodyText,
           minLines: 1,
           maxLines: null,
           decoration: InputDecoration(
@@ -49,15 +47,12 @@ class TitleDescriptionFormEditSection extends StatelessWidget {
         SizedBox(height: 8.0),
         Text(
           'PROPERTY DESCRIPTION',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.5,
-          ),
+          style: AppTextStyle.titleTextBold,
         ),
         SizedBox(height: 8.0),
         TextFormField(
           initialValue: property.description,
+          style: AppTextStyle.bodyText,
           maxLines: 4,
           decoration: InputDecoration(
             isDense: true,

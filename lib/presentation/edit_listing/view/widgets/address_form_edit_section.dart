@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class AddressFormEditSection extends StatelessWidget {
   const AddressFormEditSection({super.key, required this.property});
@@ -13,11 +14,7 @@ class AddressFormEditSection extends StatelessWidget {
       children: [
         Text(
           'ADDRESS',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.5,
-          ),
+          style: AppTextStyle.titleTextBold,
         ),
         SizedBox(height: 8.0),
         Row(
@@ -25,6 +22,7 @@ class AddressFormEditSection extends StatelessWidget {
             Expanded(
               child: TextFormField(
                 initialValue: property.location!.country,
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'Country',
@@ -52,6 +50,7 @@ class AddressFormEditSection extends StatelessWidget {
             Expanded(
               child: TextFormField(
                 initialValue: property.location!.state,
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'State / Province',
@@ -83,6 +82,7 @@ class AddressFormEditSection extends StatelessWidget {
             Expanded(
               child: TextFormField(
                 initialValue: property.location!.city,
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'City',
@@ -110,6 +110,7 @@ class AddressFormEditSection extends StatelessWidget {
             Expanded(
               child: TextFormField(
                 initialValue: property.location!.zip,
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   isDense: true,
                   hintText: 'Zip / Postal Code',
@@ -138,6 +139,7 @@ class AddressFormEditSection extends StatelessWidget {
         SizedBox(height: 8.0),
         TextFormField(
           initialValue: property.location!.address,
+          style: AppTextStyle.bodyText,
           decoration: InputDecoration(
             isDense: true,
             hintText: 'Address or street name',

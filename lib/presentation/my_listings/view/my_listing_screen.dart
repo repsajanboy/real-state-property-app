@@ -13,6 +13,7 @@ class MyListingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {},
         backgroundColor: Color(0xff023563),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class AmenitiesEditSection extends StatelessWidget {
   const AmenitiesEditSection({super.key});
@@ -10,11 +11,7 @@ class AmenitiesEditSection extends StatelessWidget {
       children: [
         Text(
           'AMENITIES',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.5,
-          ),
+          style: AppTextStyle.titleTextBold,
         ),
         SizedBox(height: 8.0),
         Row(
@@ -25,9 +22,7 @@ class AmenitiesEditSection extends StatelessWidget {
                   CheckboxListTile(
                     title: Text(
                       'Pool',
-                      style: TextStyle(
-                        color: Colors.black54,
-                      ),
+                      style: AppTextStyle.bodyTextBlackLight,
                     ),
                     value: false,
                     onChanged: (value) {},
@@ -36,9 +31,7 @@ class AmenitiesEditSection extends StatelessWidget {
                   CheckboxListTile(
                     title: Text(
                       'Pet-Friendly',
-                      style: TextStyle(
-                        color: Colors.black54,
-                      ),
+                      style: AppTextStyle.bodyTextBlackLight,
                     ),
                     value: false,
                     onChanged: (value) {},
@@ -47,9 +40,7 @@ class AmenitiesEditSection extends StatelessWidget {
                   CheckboxListTile(
                     title: Text(
                       'Terrace',
-                      style: TextStyle(
-                        color: Colors.black54,
-                      ),
+                      style: AppTextStyle.bodyTextBlackLight,
                     ),
                     value: false,
                     onChanged: (value) {},
@@ -64,9 +55,7 @@ class AmenitiesEditSection extends StatelessWidget {
                   CheckboxListTile(
                     title: Text(
                       'Parking',
-                      style: TextStyle(
-                        color: Colors.black54,
-                      ),
+                      style: AppTextStyle.bodyTextBlackLight,
                     ),
                     value: false,
                     onChanged: (value) {},
@@ -75,9 +64,7 @@ class AmenitiesEditSection extends StatelessWidget {
                   CheckboxListTile(
                     title: Text(
                       'Garden',
-                      style: TextStyle(
-                        color: Colors.black54,
-                      ),
+                      style: AppTextStyle.bodyTextBlackLight,
                     ),
                     value: false,
                     onChanged: (value) {},
@@ -86,9 +73,7 @@ class AmenitiesEditSection extends StatelessWidget {
                   CheckboxListTile(
                     title: Text(
                       'Gym',
-                      style: TextStyle(
-                        color: Colors.black54,
-                      ),
+                      style: AppTextStyle.bodyTextBlackLight,
                     ),
                     value: false,
                     onChanged: (value) {},

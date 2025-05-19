@@ -40,6 +40,7 @@ class DetailsFormSection extends StatelessWidget {
               ),
               SizedBox(height: 8.0),
               TextField(
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   hintText: "Enter property price",
                   hintStyle: AppTextStyle.textFieldHintText,
@@ -134,6 +135,7 @@ class DetailsFormSection extends StatelessWidget {
                 children: [
                   Flexible(
                     child: TextField(
+                      style: AppTextStyle.bodyText,
                       decoration: InputDecoration(
                         hintText: "No. of Beds",
                         hintStyle: AppTextStyle.textFieldHintText,
@@ -159,6 +161,7 @@ class DetailsFormSection extends StatelessWidget {
                   SizedBox(width: 8.0),
                   Flexible(
                     child: TextField(
+                      style: AppTextStyle.bodyText,
                       decoration: InputDecoration(
                         hintText: "No. of Baths",
                         hintStyle: AppTextStyle.textFieldHintText,
@@ -185,6 +188,7 @@ class DetailsFormSection extends StatelessWidget {
               ),
               SizedBox(height: 8.0),
               TextField(
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   hintText: "Enter property size (square feet)",
                   hintStyle: AppTextStyle.textFieldHintText,

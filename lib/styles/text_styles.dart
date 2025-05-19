@@ -52,6 +52,11 @@ class AppTextStyle {
     letterSpacing: 1.5,
   );
 
+  static const TextStyle titleTextWhite = TextStyle(
+    fontFamily: 'Nunito',
+    color: Colors.white,
+  );
+
   static const TextStyle listingNameBold = TextStyle(
     fontFamily: 'Nunito',
     fontSize: 16.0,
@@ -72,11 +77,10 @@ class AppTextStyle {
   );
 
   static const TextStyle bodyTextMediumBold = TextStyle(
-    fontFamily: 'Open Sans',
-    color: Colors.black87,
-    fontWeight: FontWeight.bold,
-    fontSize: 16.0
-  );
+      fontFamily: 'Open Sans',
+      color: Colors.black87,
+      fontWeight: FontWeight.bold,
+      fontSize: 16.0);
 
   static const TextStyle bodyTextSmall = TextStyle(
     fontFamily: 'Open Sans',
@@ -87,6 +91,11 @@ class AppTextStyle {
   static const TextStyle bodyTextGrey = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.grey,
+  );
+
+  static const TextStyle bodyTextBlackLight = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.black54,
   );
 
   static const TextStyle bodyTextWhite = TextStyle(

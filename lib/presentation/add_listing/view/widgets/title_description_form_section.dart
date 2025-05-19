@@ -15,6 +15,7 @@ class TitleDescriptionFormSection extends StatelessWidget {
         ),
         SizedBox(height: 8.0),
         TextField(
+          style: AppTextStyle.bodyText,
           decoration: InputDecoration(
             isDense: true,
             hintText: 'Enter title',
@@ -44,6 +45,7 @@ class TitleDescriptionFormSection extends StatelessWidget {
         ),
         SizedBox(height: 8.0),
         TextField(
+          style: AppTextStyle.bodyText,
           maxLines: 4,
           decoration: InputDecoration(
             isDense: true,
