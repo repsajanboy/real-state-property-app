@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 import 'widgets/address_form_edit_section.dart';
 import 'widgets/amenities_edit_section.dart';
@@ -27,9 +28,7 @@ class EditListingScreen extends StatelessWidget {
         ),
         title: Text(
           'Update Listing Details',
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          style: AppTextStyle.titleTextWhite,
         ),
       ),
       body: DefaultTabController(
@@ -42,6 +41,7 @@ class EditListingScreen extends StatelessWidget {
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.white70,
                 indicatorColor: Colors.white,
+                labelStyle: AppTextStyle.titleTextWhite,
                 tabs: [
                   Tab(text: "Property info"),
                   Tab(text: "Property photos")
@@ -121,7 +121,10 @@ class EditListingScreen extends StatelessWidget {
                               child: Icon(Icons.add_a_photo),
                             ),
                             SizedBox(height: 8.0),
-                            Text("Upload photo"),
+                            Text(
+                              "Upload photo",
+                              style: AppTextStyle.bodyText,
+                            ),
                           ],
                         ),
                       ),

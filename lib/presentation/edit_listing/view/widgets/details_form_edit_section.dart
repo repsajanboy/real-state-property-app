@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_property/data/model/listings/listings_model.dart';
+import 'package:real_state_property/styles/text_styles.dart';
 
 class DetailsFormEditSection extends StatelessWidget {
   DetailsFormEditSection({super.key, required this.property});
@@ -38,15 +39,12 @@ class DetailsFormEditSection extends StatelessWidget {
             children: [
               Text(
                 'PRICE & DETAILS',
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.5,
-                ),
+                style: AppTextStyle.titleTextBold,
               ),
               SizedBox(height: 8.0),
               TextFormField(
                 initialValue: property.price.toString(),
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   hintText: "Enter property price",
                   hintStyle: TextStyle(color: Colors.grey),
@@ -148,6 +146,7 @@ class DetailsFormEditSection extends StatelessWidget {
                   Flexible(
                     child: TextFormField(
                       initialValue: property.bedrooms.toString(),
+                      style: AppTextStyle.bodyText,
                       decoration: InputDecoration(
                         hintText: "No. of Beds",
                         hintStyle: TextStyle(color: Colors.grey),
@@ -174,6 +173,7 @@ class DetailsFormEditSection extends StatelessWidget {
                   Flexible(
                     child: TextFormField(
                       initialValue: property.bathrooms.toString(),
+                      style: AppTextStyle.bodyText,
                       decoration: InputDecoration(
                         hintText: "No. of Baths",
                         hintStyle: TextStyle(color: Colors.grey),
@@ -201,6 +201,7 @@ class DetailsFormEditSection extends StatelessWidget {
               SizedBox(height: 8.0),
               TextFormField(
                 initialValue: property.squareFeet.toString(),
+                style: AppTextStyle.bodyText,
                 decoration: InputDecoration(
                   hintText: "Enter property size (square feet)",
                   hintStyle: TextStyle(color: Colors.grey),
