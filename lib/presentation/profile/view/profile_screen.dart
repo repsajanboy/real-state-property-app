@@ -124,7 +124,7 @@ class ProfileScreen extends StatelessWidget {
 class GetClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    var path = new Path();
+    var path = Path();
 
     path.lineTo(0.0, size.height / 4.0);
     path.lineTo(size.width * 115, 0.0);

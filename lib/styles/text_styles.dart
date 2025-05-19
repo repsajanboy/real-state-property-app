@@ -71,6 +71,18 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
   );
 
+  static const TextStyle leadsNameBold = TextStyle(
+    fontFamily: 'Nunito',
+    fontSize: 18.0,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const TextStyle leadsSub = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.grey,
+    fontStyle: FontStyle.italic,
+  );
+
   static const TextStyle bodyText = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.black,
