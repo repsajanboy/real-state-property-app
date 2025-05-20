@@ -71,21 +71,40 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
   );
 
+  static const TextStyle leadsNameBold = TextStyle(
+    fontFamily: 'Nunito',
+    fontSize: 18.0,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const TextStyle leadsSub = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.grey,
+    fontStyle: FontStyle.italic,
+  );
+
   static const TextStyle bodyText = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.black,
   );
 
   static const TextStyle bodyTextMediumBold = TextStyle(
-      fontFamily: 'Open Sans',
-      color: Colors.black87,
-      fontWeight: FontWeight.bold,
-      fontSize: 16.0);
+    fontFamily: 'Open Sans',
+    color: Colors.black87,
+    fontWeight: FontWeight.bold,
+    fontSize: 16.0,
+  );
 
   static const TextStyle bodyTextSmall = TextStyle(
     fontFamily: 'Open Sans',
     color: Colors.black,
     fontSize: 14.0,
+  );
+
+  static const TextStyle bodyTextXSmall = TextStyle(
+    fontFamily: 'Open Sans',
+    color: Colors.black,
+    fontSize: 12.0,
   );
 
   static const TextStyle bodyTextGrey = TextStyle(
